@@ -14,7 +14,7 @@
     document.getElementById("next");
     hhh = "bar.html";
   </script>
-   <img src="./resources/modernist.png" id="logo">
+   <img src="./resources/logo.svg" id="logo">
    <div id="text">
        <button id="next" onclick="window.location.replace(hhh)"><img src="resources/next.svg"></button>
        <p id="nazvanie">Красная кровля</p>
@@ -40,7 +40,7 @@
 <script type="module">
   const modelViewer = document.querySelector("model-viewer");
   window.switchSrc = (element, name, hhh, title) => {
-    const base = "./models/" + name;
+    const base = "models/" + name;
     const silka = hhh;
     const nazv = title;
     modelViewer.src = base + '.glb';
