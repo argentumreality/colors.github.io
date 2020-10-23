@@ -55,15 +55,15 @@ if(isMobile.iOS()){
   
   <div class="slider">
     <div class="slides">
-      <button class="slide selected" id="first" onclick="switchSrc(this, 'Сосна', 'graysosna.usdz', 'graysosna.glb')" style="background-image: url('posters/graysosna.png');">
+      <button class="slide selected" id="first" onclick="switchSrc(this, 'Сосна', 'graysosna', 'graysosna.usdz', 'graysosna.glb')" style="background-image: url('posters/graysosna.png');">
 
-      </button><button class="slide" id="second" onclick="switchSrc(this, 'Орех', 'grayorex.usdz', 'grayorex.glb')" style="background-image: url('posters/grayorex.png');">
+      </button><button class="slide" id="second" onclick="switchSrc(this, 'Орех', 'grayorex', 'grayorex.usdz', 'grayorex.glb')" style="background-image: url('posters/grayorex.png');">
       
-      </button><button class="slide" id="third" onclick="switchSrc(this, 'Кофе', 'grayoffee.usdz', 'graycoffee.glb')" style="background-image: url('posters/graycoffee.png');">
+      </button><button class="slide" id="third" onclick="switchSrc(this, 'Кофе', 'grayoffee', 'grayoffee.usdz', 'graycoffee.glb')" style="background-image: url('posters/graycoffee.png');">
       
-      </button><button class="slide" id="forth" onclick="switchSrc(this, 'Синий', 'grayblue.usdz', 'grayblue.glb')" style="background-image: url('posters/grayblue.png');">    
+      </button><button class="slide" id="forth" onclick="switchSrc(this, 'Синий', 'grayblue', 'grayblue.usdz', 'grayblue.glb')" style="background-image: url('posters/grayblue.png');">    
     </button>
-    <button class="slide" id="fith" onclick="switchSrc(this, 'Черный', 'grayblack.usdz', 'grayblack.glb')" style="background-image: url('posters/grayblack.png');">    
+    <button class="slide" id="fith" onclick="switchSrc(this, 'Черный', 'grayblack', 'grayblack.usdz', 'grayblack.glb')" style="background-image: url('posters/grayblack.png');">    
     </button>
     </div>
   </div>
@@ -73,7 +73,7 @@ if(isMobile.iOS()){
 
 <script type="module">
   const modelViewer = document.querySelector("model-viewer");
-  window.switchSrc = (element, name, ios, android) => {
+  window.switchSrc = (element, title, name, ios, android) => {
     const base = "models/" + name;
     const silka = "models/" + ios;
     modelViewer.src = base + '.glb';
