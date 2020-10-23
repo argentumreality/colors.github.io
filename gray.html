@@ -53,9 +53,6 @@ if(isMobile.iOS()){
     poster="">
 
   
-  <div id="ar-prompt">
-    <img src="resources/hand.png">
-  </div>
   <div class="slider">
     <div class="slides">
       <button class="slide selected" id="first" onclick="switchSrc(this, 'Сосна', 'graysosna.usdz', 'graysosna.glb')" style="background-image: url('posters/graysosna.png');">
@@ -98,7 +95,6 @@ if(isMobile.iOS()){
     ev.preventDefault();
   });
 </script>
-<script src="js/choice.js"></script>
 <script type="application/javascript">
     const linkElement = document.getElementById("next");
     linkElement.addEventListener("message", function (event) {
