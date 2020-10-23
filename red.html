@@ -58,15 +58,15 @@ if(isMobile.iOS()){
   </div>
   <div class="slider">
     <div class="slides">
-      <button class="slide selected" id="first" onclick="switchSrc(this, 'Сосна', 'redsosna.usdz', 'redsosna.glb')" style="background-image: url('posters/redsosna.png');">
+      <button class="slide selected" id="first" onclick="switchSrc(this, 'Сосна', 'redsosna', 'redsosna.usdz', 'redsosna.glb')" style="background-image: url('posters/redsosna.png');">
 
-      </button><button class="slide" id="second" onclick="switchSrc(this, 'Орех', 'redorex.usdz', 'redorex.glb')" style="background-image: url('posters/redorex.png');">
+      </button><button class="slide" id="second" onclick="switchSrc(this, 'Орех', 'redorex', 'redorex.usdz', 'redorex.glb')" style="background-image: url('posters/redorex.png');">
       
       </button><button class="slide" id="third" onclick="switchSrc(this, 'Кофе', 'redcoffee.usdz', 'redcoffee.glb')" style="background-image: url('posters/redcoffee.png');">
       
-      </button><button class="slide" id="forth" onclick="switchSrc(this, 'Синий', 'redblue.usdz', 'redblue.glb')" style="background-image: url('posters/redblue.png');">    
+      </button><button class="slide" id="forth" onclick="switchSrc(this, 'Синий', 'redcoffee', 'redblue.usdz', 'redblue.glb')" style="background-image: url('posters/redblue.png');">    
     </button>
-    <button class="slide" id="fith" onclick="switchSrc(this, 'Черный', 'redblack.usdz', 'redblack.glb')" style="background-image: url('posters/redblack.png');">    
+    <button class="slide" id="fith" onclick="switchSrc(this, 'Черный', 'redblack', 'redblack.usdz', 'redblack.glb')" style="background-image: url('posters/redblack.png');">    
     </button>
     </div>
   </div>
@@ -76,11 +76,11 @@ if(isMobile.iOS()){
 
 <script type="module">
   const modelViewer = document.querySelector("model-viewer");
-  window.switchSrc = (element, name, ios, android) => {
-    const base = "models/" + android;
+  window.switchSrc = (element, title, name, ios, android) => {
+    const base = "models/" + name;
     const silka = "models/" + ios;
     modelViewer.src = base + '.glb';
-    modelViewer.poster = base - '.glb' + '.png';
+    modelViewer.poster = base + '.png';
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
     element.classList.add("selected");
