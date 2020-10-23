@@ -77,10 +77,10 @@ if(isMobile.iOS()){
 <script type="module">
   const modelViewer = document.querySelector("model-viewer");
   window.switchSrc = (element, name, ios, android) => {
-    const base = "models/" + name;
+    const base = "models/" + android;
     const silka = "models/" + ios;
     modelViewer.src = base + '.glb';
-    modelViewer.poster = base + '.png';
+    modelViewer.poster = base - '.glb' + '.png';
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
     element.classList.add("selected");
