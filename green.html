@@ -78,7 +78,7 @@ if(isMobile.iOS()){
     const base = "models/" + name;
     const silka = "models/" + ios;
     modelViewer.src = base + '.glb';
-    modelViewer.poster = 'posters/' + name + '.png';
+    modelViewer.poster = base + '.png';
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
     element.classList.add("selected");
